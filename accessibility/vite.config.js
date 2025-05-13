@@ -1,10 +1,8 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
   server: {
-    port: 3001, // เปลี่ยนพอร์ตที่ต้องการที่นี่
-  },
+    host: '0.0.0.0', // 👈 สำคัญ!
+    port: 3000,       // หรือพอร์ตที่คุณใช้
+  }
 })
