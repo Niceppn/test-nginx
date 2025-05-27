@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-import mongoose from 'mongoose';
-import { connectionString } from '../config.js';
+const express = require('express');
+const router = express.Router();
+const mongoose = require('mongoose');
+const { connectionString } = require('../config.js');
 
 mongoose.connect(connectionString)
   .then(() => {
@@ -10,7 +10,6 @@ mongoose.connect(connectionString)
   .catch((err) => {
     console.error("MongoDB connection error:", err);
   });
-
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
